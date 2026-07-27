@@ -47,3 +47,15 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/daffa964/my-app:latest
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulate Deployment
+        run: 
+          echo "===================="
+          echo "Deployment dimulai ..."
+          echo "Image sudah tersedia di GHCR, silakan deploy ke server Anda."
+          echo "Tahap berikutnya adalah pull di VPS"
+          echo "===================="
